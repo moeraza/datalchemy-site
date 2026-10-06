@@ -289,8 +289,8 @@
     <div class="wrap hire">
       <div>
         <div class="section-kicker">Working interview</div>
-        <h2>Bring ten historical alerts. We work them live.</h2>
-        <p class="sub">Better than a demo. You see the case note, the SOP clause, and whether you would have closed it. If the expert coworker cannot show the clause, it does not close the alert.</p>
+        <h2>Bring your biggest problem. We work it live.</h2>
+        <p class="sub">Better than a demo. Payments, fraud, or compliance. You bring the queue, the dispute, or the abuse pattern. We work it in the tools you already use, and you see whether the expert coworker would have closed it.</p>
         <p class="fine">The offer is the hire: a payments analyst, a fraud analyst, or a compliance analyst, working in the stack you already have.</p>
       </div>
       <div>
@@ -306,8 +306,8 @@
               <option>Not sure yet</option>
             </select>
           </label>
-          <label>What is drowning the team
-            <textarea name="queue" placeholder="Chargeback queues, product abuse, transaction-monitoring alerts..."></textarea>
+          <label>The problem
+            <textarea name="queue" placeholder="Chargebacks, product abuse, a transaction-monitoring backlog..."></textarea>
           </label>
           <button class="btn" type="submit">Request the working interview</button>
           <p class="fine">This draft stores the request in your browser only. Wire it to your inbox before you publish.</p>
@@ -326,35 +326,7 @@
       <div>Fintech and lifestyle B2C · Shadow mode before any auto-close</div>
     </footer>
   </div>
-  <div class="picker" id="picker">
-    <p>Theme</p>
-    <div class="row" data-group="theme">
-      <button type="button" data-value="desk">Desk</button>
-      <button type="button" data-value="ledger">Ledger</button>
-      <button type="button" data-value="night">Night</button>
-      <button type="button" data-value="grove">Grove</button>
-      <button type="button" data-value="signal">Signal</button>
-    </div>
-    <p>Type</p>
-    <div class="row" data-group="font">
-      <button type="button" data-value="newsroom">Newsroom</button>
-      <button type="button" data-value="grotesk">Grotesk</button>
-      <button type="button" data-value="fraunces">Fraunces</button>
-      <button type="button" data-value="bodoni">Bodoni</button>
-      <button type="button" data-value="cormorant" class="on">Cormorant</button>
-    </div>
-  </div>
   <script>
-    document.getElementById("picker").addEventListener("click", function (e) {
-      const button = e.target.closest("button");
-      if (!button) return;
-      const group = button.parentElement.dataset.group;
-      document.body.dataset[group] = button.dataset.value;
-      button.parentElement.querySelectorAll("button").forEach(function (el) { el.classList.remove("on"); });
-      button.classList.add("on");
-    });
-    document.body.dataset.theme = "mint";
-    document.body.dataset.font = "cormorant";
     document.getElementById("interview-form").addEventListener("submit", function (e) {
       e.preventDefault();
       const data = Object.fromEntries(new FormData(e.target).entries());
