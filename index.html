@@ -158,8 +158,20 @@
         color: var(--muted);
         font-size: 14px;
       }
+      ::selection {
+        background: rgba(22, 198, 54, 0.28);
+        color: inherit;
+      }
+      a:hover,
       .nav-links a:hover {
-        color: var(--ink);
+        background: rgba(22, 198, 54, 0.1);
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #16c636;
+        background: rgba(22, 198, 54, 0.1);
       }
       .btn {
         display: inline-flex;
